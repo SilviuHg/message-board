@@ -1,7 +1,15 @@
 const express = require("express");
+const path = require("node:path");
+
+const indexRouter = require("./routes/indexRoute");
 const app = express();
 
-app.get("/", (req, res) => res.send("Hello, world!"));
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+
+app.use(express.urlencoded({ extended: false }));
+
+app.use("/", indexRouter);
 
 const PORT = 3000;
 app.listen(PORT, () =>

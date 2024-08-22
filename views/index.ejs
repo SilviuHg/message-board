@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <p><%= title %></p>
+    <ul>
+      <% messages.forEach(message=> { %>
+      <li>
+        <%= message.user %>: <%= message.text %>
+        <br />
+        Date: <%= message.added.toDateString() %>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
