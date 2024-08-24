@@ -1,12 +1,15 @@
 <html>
   <body>
     <p><%= title %></p>
+    <a href="/new">Send a message</a>
     <ul>
-      <% messages.forEach(message=> { %>
+      <% messages.forEach((message) => { %>
       <li>
         <%= message.user %>: <%= message.text %>
         <br />
         Date: <%= message.added.toDateString() %>
+        <br />
+        <a href="/message/<%= message.id %>">Open</a>
       </li>
       <% }); %>
     </ul>

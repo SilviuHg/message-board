@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <h2>Message details</h2>
+    <a href="/">Back to messages</a>
+    <ul>
+      <li>
+        <%= message.user %>: <%= message.text %>
+        <br />
+        Date: <%= message.added.toDateString() %>
+      </li>
+    </ul>
+  </body>
+</html>
