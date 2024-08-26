@@ -13,5 +13,5 @@ app.use("/", indexRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, "0.0.0.0", () =>
-  console.log(`My first Express app - listening on port ${PORT}!`)
+  console.log(`My first Express app - listening on port ${port}!`)
 );
