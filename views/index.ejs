@@ -5,9 +5,9 @@
     <ul>
       <% messages.forEach((message) => { %>
       <li>
-        <%= message.user %>: <%= message.text %>
+        <%= message.username %>: <%= message.text %>
         <br />
-        Date: <%= message.added.toDateString() %>
+        Date: <%= message.date.toDateString() %>
         <br />
         <a href="/message/<%= message.id %>">Open</a>
       </li>
